@@ -1,13 +1,12 @@
-package com.example.TransactionSample.customer;
+package com.example.TransactionSample.accessCustomer.config;
 
-
-import antlr.actions.cpp.ActionLexer;
+import com.example.TransactionSample.accessCustomer.dao.CustomerRepository;
+import com.example.TransactionSample.accessCustomer.entity.Customer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 import static java.time.Month.*;
@@ -58,3 +57,5 @@ public class CustomerConfig {
         };
     }
 }
+
+

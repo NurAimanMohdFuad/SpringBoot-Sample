@@ -1,9 +1,11 @@
-package com.example.TransactionSample.customer;
+package com.example.TransactionSample.accessCustomer.controller;
 
+
+import com.example.TransactionSample.accessCustomer.entity.Customer;
+import com.example.TransactionSample.accessCustomer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
@@ -14,6 +16,7 @@ public class CustomerController {
 
     @Autowired
     public CustomerController(CustomerService customerService){
+
         this.customerService = customerService;
     }
 
@@ -26,6 +29,7 @@ public class CustomerController {
 
     @PostMapping
     public void registerNewCustomer(@RequestBody Customer customer){
+
         customerService.addNewCustomer(customer);
     }
 
@@ -41,5 +45,6 @@ public class CustomerController {
         customerService.updateCustomer(customerId, name, balance);
     }
 }
+
 
 

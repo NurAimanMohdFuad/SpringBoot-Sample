@@ -1,4 +1,4 @@
-package com.example.TransactionSample.customer;
+package com.example.TransactionSample.accessCustomer.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -22,6 +22,8 @@ public class Customer {
     private LocalDate lastUse;
     private Float balance;
 
+
+
     public Customer() {
     }
 
@@ -30,6 +32,7 @@ public class Customer {
                     String name,
                     LocalDate lastUse,
                     Float balance) {
+        this.id = id;
         this.card = card;
         this.name = name;
         this.lastUse = lastUse;
@@ -40,6 +43,7 @@ public class Customer {
                     String name,
                     LocalDate lastUse,
                     Float balance) {
+        this.card = card;
         this.name = name;
         this.lastUse = lastUse;
         this.balance = balance;
@@ -95,3 +99,4 @@ public class Customer {
                 '}';
     }
 }
+
